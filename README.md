@@ -1,6 +1,4 @@
-## README.md:
 
-```markdown
 # Medical Aid Cost Prediction - ICE TASK 2
 
 ## 📋 Project Overview
