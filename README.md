@@ -83,7 +83,7 @@ This repository contains:
 
 CI workflow status: **Passing**
 
-![CI workflow screenshot](screenshots/ci-success.png)
+
 
 ---
 
