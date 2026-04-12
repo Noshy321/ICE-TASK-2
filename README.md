@@ -1,206 +1,92 @@
-# CyberGuard - Cybersecurity Awareness Chatbot
-## PROG6221 Part 1 | Console Application
+# CyberGuard
+
+A command-line cybersecurity awareness chatbot for South African citizens.
 
 ---
 
-## Project Description
+## What it does
 
-CyberGuard is a command-line cybersecurity awareness chatbot developed for South African citizens. The chatbot educates users about online safety practices including password security, phishing detection, safe browsing, and scam prevention. This is Part 1 of a three-part POE submission.
+CyberGuard educates users about online safety through conversation. It covers password security, phishing scams, safe browsing, and privacy protection. The bot remembers your name, responds to questions, and provides security tips.
 
 ---
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| Voice Greeting | Plays WAV audio at startup |
-| ASCII Art Logo | Custom cybersecurity-themed logo |
-| Personalised Interaction | Asks for and remembers user's name |
-| Keyword Recognition | Responds to cybersecurity topics |
-| Input Validation | Handles empty or invalid inputs |
-| Help System | Displays available commands |
-| Typing Animation | Natural conversation simulation |
-| Coloured Console | Cyan, green, red, yellow text |
-| Security Threat Meter | Animated threat level display |
-
----
-
-## Topics Covered
-
-- Password safety
-- Phishing scams
-- Safe browsing
-- Privacy protection
-- Online scams
-- South African cybersecurity statistics
+- Voice greeting on startup (WAV file)
+- ASCII art logo
+- Personalised responses using your name
+- Keyword detection for cybersecurity topics
+- Typing animation and coloured console output
+- Security threat level meter
+- Help menu with available commands
 
 ---
 
 ## Commands
 
-| Command | Action |
-|---------|--------|
-| `help` | Display help menu |
-| `joke` | Tell a cybersecurity joke |
-| `tip` | Give a security tip |
-| `exit` or `bye` | Exit the chatbot |
+| Command | What it does |
+|---------|---------------|
+| `help` | Shows available commands and topics |
+| `joke` | Tells a cybersecurity joke |
+| `tip` | Gives a random security tip |
+| `exit` or `bye` | Closes the application |
 
-### Example Questions
-How do I create a strong password?
-What is phishing?
-How to browse safely?
-Tell me about privacy
+You can also ask questions like:
 
-text
-
----
-
-## Requirements
-
-| Requirement | Version |
-|-------------|---------|
-| .NET SDK | 8.0 or higher |
-| Visual Studio | 2022 |
-| Operating System | Windows 10/11 |
+- "How do I create a strong password?"
+- "What is phishing?"
+- "How to browse safely?"
+- "Tell me about privacy"
 
 ---
 
-## Installation and Setup
+## Running the application
 
-### Step 1: Clone the Repository
+1. Open the solution in Visual Studio 2022
+2. Build the project (Build > Build Solution)
+3. Press F5 to run
 
-```bash
-git clone https://github.com/YOUR_USERNAME/CybersecurityChatbot.git
-cd CybersecurityChatbot
-Step 2: Build the Project
-bash
-dotnet build
-Step 3: Run the Application
-bash
-dotnet run
-Step 4: Audio Setup (Optional)
-Place your greeting.wav file in:
+If you want the voice greeting, place a `greeting.wav` file in the output folder (`bin/Debug/net8.0/`). The application will still run without it using console beeps.
 
-text
-CybersecurityChatbot/bin/Debug/net8.0/greeting.wav
-If no WAV file is found, the application uses console beeps as a fallback.
+---
 
-Project Structure
-text
+## Project structure
 CybersecurityChatbot/
-├── Program.cs                 # Entry point
+├── Program.cs
 ├── Models/
-│   └── Chatbot.cs            # Main chatbot logic
+│ └── Chatbot.cs
 ├── Services/
-│   ├── AnimationService.cs   # Typing and loading effects
-│   ├── ResponseEngine.cs     # Keyword detection
-│   ├── SoundService.cs       # Audio playback
-│   └── ThreatLevelMonitor.cs # Suspicious keyword detection
+│ ├── AnimationService.cs
+│ ├── ResponseEngine.cs
+│ ├── SoundService.cs
+│ └── ThreatLevelMonitor.cs
 ├── Utilities/
-│   ├── AsciiArtGenerator.cs  # ASCII logo display
-│   ├── JokeLibrary.cs        # Jokes collection
-│   └── UiHelper.cs           # Colours and borders
+│ ├── AsciiArtGenerator.cs
+│ ├── JokeLibrary.cs
+│ └── UiHelper.cs
 ├── Data/
-│   └── CybersecurityFacts.cs # SA statistics and tips
-├── Resources/
-│   └── greeting.wav          # Voice greeting file
-└── README.md                 # This file
-GitHub and CI Setup
-Commits
-The repository contains a minimum of 6 meaningful commits with descriptive messages:
-
-text
-- Initial commit: Project structure
-- Added ASCII art and voice greeting
-- Implemented response engine
-- Added UI helper with colours
-- Added help menu and commands
-- Final cleanup and CI setup
-Continuous Integration
-GitHub Actions is configured to automatically build and verify the code on each push.
-
-CI Workflow Status:
-
-https://screenshots/ci-success.png
-
-Screenshot showing green check mark from GitHub Actions
-
-Video Presentation
-An unlisted YouTube video demonstrating:
-
-Code structure explanation
-
-Live application demo
-
-Logic and flow explanation
-
-Voice integration and formatting techniques
-
-Video Link: Click here to watch
-
-Assessment Criteria Met
-Criteria	Status
-Voice Greeting and Image Display	✅
-Greeting and User Interaction	✅
-Basic Response System	✅
-Input Validation	✅
-Enhanced Console UI	✅
-Code Structure and Readability	✅
-GitHub and CI Setup	✅
-Video Presentation	✅
-Correct Submission	✅
-References
-Pieterse, H. 2021. The Cyber Threat Landscape in South Africa: A 10-Year Review. The African Journal of Information and Communication, 28(28). doi: https://doi.org/10.23962/10539/32213
-
-Author Information
-Detail	Information
-Name	[Your Full Name]
-Student Number	[Your Student Number]
-Module	PROG6221 - Programming 2A
-Assessment	POE Part 1
-Date	2026
-Troubleshooting
-Issue	Solution
-No sound at startup	Place greeting.wav in output directory
-ASCII art misaligned	Set console font to Consolas
-Build fails	Run dotnet restore
-Stay safe online. CyberGuard is here to help. 🔒
+│ └── CybersecurityFacts.cs
+└── Resources/
+└── greeting.wav
 
 text
 
 ---
 
-## 📝 Instructions to Complete
+## GitHub
 
-Replace these placeholders before submitting:
+This repository contains:
 
-| Placeholder | Replace With |
-|-------------|--------------|
-| `YOUR_USERNAME` | Your GitHub username |
-| `YOUR_VIDEO_LINK` | Your unlisted YouTube video URL |
-| `[Your Full Name]` | Your actual name |
-| `[Your Student Number]` | Your student ID |
+- Minimum 6 commits with descriptive messages
+- GitHub Actions workflow for CI
+- Build verification on each push
 
----
+CI workflow status: **Passing**
 
-## 📸 Add CI Screenshot
-
-1. Create a folder called `screenshots` in your repository
-2. Go to GitHub → Actions tab
-3. Click on a successful workflow run (green check mark)
-4. Take a screenshot
-5. Save as `ci-success.png` in the `screenshots/` folder
-6. Commit and push
+![CI workflow screenshot](screenshots/ci-success.png)
 
 ---
 
-## ✅ Before Submitting
+## Reference
 
-- [ ] Replace all placeholders with your actual information
-- [ ] Add CI screenshot
-- [ ] Upload video to YouTube (unlisted)
-- [ ] Paste YouTube link in README
-- [ ] Commit and push to GitHub
-- [ ] Submit GitHub link on ARC
-
-Would you like me to help with the **GitHub Actions workflow file** or **video presentation script** next?
+Pieterse, H. 2021. The Cyber Threat Landscape in South Africa: A 10-Year Review. *The African Journal of Information and Communication*, 28(28).
